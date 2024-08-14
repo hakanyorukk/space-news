@@ -7,10 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: {},
+        accent: {},
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        event:
+          "url('https://spacelaunchnow-prod-east.nyc3.digitaloceanspaces.com/media/images/soyuz_ms_in_orb_image_20240313130407.jpeg')",
       },
     },
   },
