@@ -4,9 +4,9 @@ function Navigation({ active }) {
   return (
     <nav>
       <ul
-        className={`lg:flex grid gap-12 text-xl font-[500] uppercase transition-all duration-200 ${
+        className={`flex lg:flex-row flex-col gap-12 text-xl font-[500] uppercase transition-all duration-200 absolute w-[50%] ${
           active
-            ? "visible z-50 auto-cols-max py-16 px-20 backdrop-blur-3xl "
+            ? "visible z-50 auto-cols-max py-16 px-15 pl-12 backdrop-blur-3xl "
             : "lg:visible invisible"
         } absolute top-10 lg:top-0 right-0 lg:bg-transparent bg-slate-800/[.75] `}
       >

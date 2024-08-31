@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getApod } from "../_lib/data-service";
+import { getApod } from "../_lib/action";
 import { useEffect, useState } from "react";
 
 function PictureDay() {
@@ -17,7 +17,7 @@ function PictureDay() {
   //   return <div>Loading...</div>;
   // }
   return (
-    <section id="today" className="mb-[10rem]">
+    <section id="today" className="mb-[10rem] mt-40 sm:mt-6">
       <div className="grid grid-rows-2 lg:flex max-w-[85rem] mx-auto my-12">
         <div className="row-span-2 lg:basis-1/2 p-12">
           <h3 className="uppercase tracking-[0.3em] mt-10 mb-2">TODAY</h3>

@@ -5,7 +5,7 @@ import VideoItem from "./VideoItem";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Suspense, useEffect, useState } from "react";
-import { getPhoto1 } from "../_lib/data-service";
+import { getPhoto1 } from "../_lib/action";
 import UpcomingLaunch from "./UpcomingLaunch";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 export const revalidate = 36000;

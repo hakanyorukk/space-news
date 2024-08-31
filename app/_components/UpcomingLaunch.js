@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getUpcomingLaunch } from "../_lib/data-service";
+import { getUpcomingLaunch } from "../_lib/action";
+import CountUp from "react-countup";
 
 function UpcomingLaunch() {
   const [launchItem, setLaunchItem] = useState([]);
@@ -70,25 +71,35 @@ function UpcomingLaunch() {
           </h4>
           <div className="text-center">
             <h3 className="text-md lg:text-2xl font-bold">
-              {`${timeLeft.days} `}{" "}
+              <CountUp start={0} duration={1} delay={2} end={timeLeft.days} />
             </h3>
             <h3 className="text-sm lg:text-md">Days</h3>
           </div>
           <p className="text-md lg:text-2xl  font-bold">:</p>
           <div className="text-center">
-            <h3 className="text-md lg:text-2xl  font-bold">
-              {`${timeLeft.hours} `}{" "}
-            </h3>
+            <div className="text-md lg:text-2xl  font-bold">
+              <CountUp start={0} delay={2} end={timeLeft.hours} />
+            </div>
             <h3 className="text-sm lg:text-md">Hours</h3>
           </div>
           <p className="text-md lg:text-2xl  font-bold">:</p>
           <div className="text-center">
-            <h3 className="text-md lg:text-2xl  font-bold">{`${timeLeft.minutes} `}</h3>
+            <h3 className="text-md lg:text-2xl  font-bold">
+              {" "}
+              <CountUp
+                start={0}
+                duration={1}
+                delay={2}
+                end={timeLeft.minutes}
+              />
+            </h3>
             <h3 className="text-sm lg:text-md">Minutes </h3>
           </div>
           <p className="text-md lg:text-2xl  font-bold">:</p>
           <div className="text-center ">
-            <h3 className="text-md lg:text-2xl  font-bold">{`${timeLeft.seconds} `}</h3>
+            <h3 className="text-md lg:text-2xl  font-bold">
+              {timeLeft.seconds || 0}
+            </h3>
             <h3 className="text-sm lg:text-md">Seconds</h3>
           </div>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import Slider from "react-slick";
-import { getNews } from "../_lib/data-service";
+import { getNews } from "../_lib/action";
 
 import NewsItem from "./NewsItem";
 import "slick-carousel/slick/slick.css";

@@ -1,3 +1,5 @@
+"use server";
+
 export async function getPhoto1({ id }) {
   const res = await fetch(`https://images-api.nasa.gov/search?&nasa_id=${id}`);
   if (!res.ok) throw Error("Filed getting search results.");

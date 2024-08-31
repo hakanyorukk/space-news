@@ -1,4 +1,4 @@
-import { getEvent } from "../_lib/data-service";
+import { getEvent } from "../_lib/action";
 import Link from "next/link";
 
 async function EventItem() {
