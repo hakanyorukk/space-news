@@ -6,18 +6,18 @@ import Header from "./_components/Header";
 import "./globals.css";
 
 export const metadata = {
-  title: { template: "%s / Galactic Gaze", default: "Welcome / Galactic Gaze" },
+  title: { template: "%s / Stellar News", default: "Stellar News" },
   description: "Everyting about Space!",
 };
-//text-violet accent sky
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={` text-violet-50 ${exo2.className} min-h-[150vh] bg-gradient-to-br from-gray-900 via-slate-900 to-indigo-950 `}
+        className={`text-violet-50 ${exo2.className} min-h-screen bg-gradient-to-b from-slate-950 to-indigo-950 `}
       >
         <Header />
-        <main className="">{children}</main>
+        <main className="h-full pt-12 w-full">{children}</main>
         <Footer />
       </body>
     </html>

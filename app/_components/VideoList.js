@@ -8,7 +8,8 @@ import { Suspense, useEffect, useState } from "react";
 import { getPhoto1 } from "../_lib/action";
 import UpcomingLaunch from "./UpcomingLaunch";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-export const revalidate = 36000;
+import { LuLoader2 } from "react-icons/lu";
+export const revalidate = 3600;
 
 function SampleNextArrow(props) {
   const { style, onClick } = props;
@@ -40,7 +41,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-function VideoList() {
+export default function VideoList() {
   //const id_1 = "CLPS Overview Video Final";
   const id_2 = "KSC-20221005-VP-MWC01-001-CREW5-HIGHLIGHTS-3315114";
   //const id_3 = "jsc2022m000285-Artemis_I_Mission_Highlights_MP4";
@@ -83,23 +84,27 @@ function VideoList() {
   };
 
   return (
-    <section className="bg-transparent mb-[15rem] h-[58vh] shadow-2xl ">
-      <div className="max-w-[85%] mx-auto relative h-[58vh] ">
-        <Slider {...settings} className="flex">
-          {videos.map((video, index) => (
-            <VideoItem
-              key={index}
-              item={video.item}
-              video_URL={video.video_URL}
-            />
-          ))}
-        </Slider>
-        <Suspense>
-          <UpcomingLaunch />
-        </Suspense>
-      </div>
+    <section className="relative bg-transparent mb-[16rem] h-[58vh] shadow-2xl ">
+      {!videos ? (
+        <div className="flex justify-center place-items-center h-full w-full">
+          <LuLoader2 className="animate-spin text-7xl " />
+        </div>
+      ) : (
+        <div className="max-w-[85%] mx-auto h-[58vh] relative">
+          <Slider {...settings} className="flex">
+            {videos.map((video, index) => (
+              <VideoItem
+                key={index}
+                item={video.item}
+                video_URL={video.video_URL}
+              />
+            ))}
+          </Slider>
+          <Suspense>
+            <UpcomingLaunch />
+          </Suspense>
+        </div>
+      )}
     </section>
   );
 }
-
-export default VideoList;

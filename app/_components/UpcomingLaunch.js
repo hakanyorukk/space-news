@@ -54,60 +54,59 @@ function UpcomingLaunch() {
   }, [targetDate]);
 
   return (
-    <div className="px-4 lg:px-[5rem] py-5 absolute right-[12%] border-2 border-slate-500 top-[93%] left-[12%] h-[10rem] justify-center  backdrop-blur-sm bg-gradient-to-l from-slate-900 via-indigo-950 to-slate-900 shadow-md shadow-indigo-950 ">
-      <div className="mx-4 mb-4 flex justify-between items-center ">
-        <h2 className="text-indigo-300 text-xl md:text-4xl font-bold">
-          Upcoming Launch
-        </h2>
-        <h2 className="text-indigo-200 text-xl font-medium hidden xl:block">
-          {launchItem?.name}
-        </h2>
-      </div>
-
-      <div className=" items-center flex justify-between">
-        <div className="flex gap-0 lg:gap-[0.8rem]">
-          <h4 className="text-sm lg:text-3xl lg:font-bold font-semibold">
-            T<span className="mx-2">-</span>
-          </h4>
-          <div className="text-center">
-            <h3 className="text-md lg:text-2xl font-bold">
-              <CountUp start={0} duration={1} delay={2} end={timeLeft.days} />
-            </h3>
-            <h3 className="text-sm lg:text-md">Days</h3>
-          </div>
-          <p className="text-md lg:text-2xl  font-bold">:</p>
-          <div className="text-center">
-            <div className="text-md lg:text-2xl  font-bold">
-              <CountUp start={0} delay={2} end={timeLeft.hours} />
-            </div>
-            <h3 className="text-sm lg:text-md">Hours</h3>
-          </div>
-          <p className="text-md lg:text-2xl  font-bold">:</p>
-          <div className="text-center">
-            <h3 className="text-md lg:text-2xl  font-bold">
-              {" "}
-              <CountUp
-                start={0}
-                duration={1}
-                delay={2}
-                end={timeLeft.minutes}
-              />
-            </h3>
-            <h3 className="text-sm lg:text-md">Minutes </h3>
-          </div>
-          <p className="text-md lg:text-2xl  font-bold">:</p>
-          <div className="text-center ">
-            <h3 className="text-md lg:text-2xl  font-bold">
-              {timeLeft.seconds || 0}
-            </h3>
-            <h3 className="text-sm lg:text-md">Seconds</h3>
-          </div>
+    <div
+      className="absolute sm:-bottom-28 -bottom-48 flex flex-col right-0 mx-auto left-0 md:h-fit h-fit justify-center xl:w-[75%] w-[90%] backdrop-blur-sm shadow-md shadow-indigo-950 gap-8 before:bg-[conic-gradient(#7e22ce,#0e7490,#9333ea,#2563eb)] before:content-[''] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:absolute before:w-full before:h-full before:blur-lg before:-z-10 p-2 bg-transparent border-none rounded-xl
+      "
+    >
+      <div className=" bg-gradient-to-l from-slate-900 via-indigo-950 to-slate-900 w-full h-full py-5 px-8 rounded-xl  lg:px-[5rem]">
+        <div className=" flex sm:flex-row flex-col justify-between items-center gap-2">
+          <h2 className="text-indigo-300 text-xl md:text-4xl font-bold">
+            Upcoming Launch
+          </h2>
+          <h2 className="text-indigo-200 sm:text-xl text-lg font-medium ">
+            {launchItem?.name}
+          </h2>
         </div>
-        <div className="text-center mr-8 hidden xl:block">
-          <h5 className="text-sm xl:text-lg">{launchItem?.pad?.name}</h5>
-          <h5 className="text-sm xl:text-lg">
-            {launchItem?.pad?.location.name}
-          </h5>
+
+        <div className="flex sm:flex-row flex-col items-center  justify-between gap-8">
+          <div className="flex gap-0 lg:gap-[0.8rem]">
+            <h4 className="text-sm lg:text-3xl lg:font-bold font-semibold">
+              T<span className="mx-2">-</span>
+            </h4>
+            <div className="text-center">
+              <h3 className="text-md lg:text-2xl font-bold">
+                {timeLeft.days || 0}
+              </h3>
+              <h3 className="text-xs lg:text-md">Days</h3>
+            </div>
+            <p className="text-md lg:text-2xl  font-bold">:</p>
+            <div className="text-center">
+              <div className="text-md lg:text-2xl  font-bold">
+                {timeLeft.hours || 0}
+              </div>
+              <h3 className="text-xs lg:text-md">Hours</h3>
+            </div>
+            <p className="text-md lg:text-2xl  font-bold">:</p>
+            <div className="text-center">
+              <h3 className="text-md lg:text-2xl  font-bold">
+                {timeLeft.minutes || 0}
+              </h3>
+              <h3 className="text-xs lg:text-md">Minutes </h3>
+            </div>
+            <p className="text-md lg:text-2xl  font-bold">:</p>
+            <div className="text-center ">
+              <h3 className="text-md lg:text-2xl  font-bold">
+                {timeLeft.seconds || 0}
+              </h3>
+              <h3 className="text-xs lg:text-md">Seconds</h3>
+            </div>
+          </div>
+          <div className="text-center">
+            <h5 className="text-sm xl:text-lg">{launchItem?.pad?.name}</h5>
+            <h5 className="text-sm xl:text-lg">
+              {launchItem?.pad?.location.name}
+            </h5>
+          </div>
         </div>
       </div>
     </div>

@@ -19,19 +19,19 @@ async function EventItem() {
   const formattedDate = new Intl.DateTimeFormat("en-UK", options).format(date);
 
   return (
-    <section className="w-full p-12 object-cover h-full" id="event">
-      <h3 className="mb-8 inline-block text-3xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-indigo-800  via-violet-900  to-purple-500">
+    <section className="w-full p-4 sm:p-12 object-cover h-full" id="event">
+      <h3 className="mb-6 pb-4 inline-block text-3xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-indigo-500  to-cyan-500">
         Upcoming Event
       </h3>
       <div className="bg-center bg-event object-cover w-full bg-cover items-center place-content-center h-[80vh] ">
         <div className="grid border-0 xl:border-2 w-full xl:w-[38%] xl:ml-20 ml-0 px-12 bg-slate-500/[.25] backdrop-blur-sm rounded-md overflow-hidden ">
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold uppercase mb-4 lg:mb-12 tracking-[0.18em] py-12">
+          <h2 className="text-xl lg:text-4xl xl:text-5xl font-bold uppercase mb-4 lg:mb-12 tracking-[0.18em] py-12">
             {getEventItem.name}
           </h2>
-          <p className="text-xl lg:text-2xl font-medium">
+          <p className=" text-lg md:text-xl lg:text-2xl font-medium">
             {getEventItem.description}
           </p>
-          <h3 className="mt-6 text-xl lg:text-2xl font-bold tracking-wider">
+          <h3 className="mt-6 text-lg md:text-xl lg:text-2xl font-bold tracking-wider">
             {formattedDate}
           </h3>
           <Link

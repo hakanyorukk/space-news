@@ -89,11 +89,11 @@ function NewsList() {
 
   return (
     <section
-      className="px-6 md:px-14 sm:px-[5rem] h-[60vh] mb-[2rem]"
+      className="px-8 md:px-14 sm:px-[5rem] h-[60vh] mb-[2rem]"
       id="latestNews"
     >
-      <div className="h-full">
-        <h2 className="m-10 inline-block text-4xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-indigo-800  via-violet-900  to-purple-500">
+      <div className="h-full mt-80 sm:mt-60">
+        <h2 className="m-10 inline-block text-3xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-indigo-500  to-cyan-500">
           Latest News
         </h2>
         <Slider {...settings}>

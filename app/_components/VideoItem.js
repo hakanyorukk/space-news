@@ -7,10 +7,10 @@ function VideoItem({ item, video_URL }) {
           autoPlay
           loop
           muted
-          className="absolute inset-0 w-full h-full object-cover -z-10 "
+          className="absolute inset-0 w-full h-full object-cover "
         />
 
-        <div className=" relative top-8 mx-10  max-w-[95%]">
+        <div className=" relative top-8 mx-10 max-w-[95%]">
           <h1 className="bg-clip-text bg-slate-50 text-transparent relative col-span-1 lg:max-w-[55%] text-2xl lg:text-6xl font-bold text-left leading-[1.2em]">
             {item[0].title}
           </h1>

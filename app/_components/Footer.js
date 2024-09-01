@@ -1,6 +1,8 @@
 "use client";
 
 import { IoArrowUpOutline } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa6";
+import Link from "next/link";
 
 function Footer() {
   const scrollToTop = () => {
@@ -19,7 +21,7 @@ function Footer() {
       </button>
       <div className="flex justify-between text-xl ouline max-w-[85rem] mx-auto ">
         <div>
-          <ul className="lg:flex grid gap-x-8  border-t-2 border-slate-600 pt-2 place-items-start">
+          <ul className="lg:flex grid gap-x-8 gap-y-4 border-t-2 border-slate-600 pt-2 place-items-start sm:text-lg text-base">
             <li>Company</li>
             <li>Contact us</li>
             <li>Carrers</li>
@@ -27,11 +29,22 @@ function Footer() {
             <li>Terms</li>
           </ul>
         </div>
-        <div className="border-t-2 border-slate-600 pt-2 grid lg:flex">
-          <span className="cursor-pointer transform font-medium hover:scale-110 duration-300">
+        <div className="border-t-2 border-slate-600 pt-2 grid lg:flex gap-8 ">
+          <span className="sm:text-lg text-base cursor-pointer transform font-medium hover:scale-110 duration-300 ">
             &copy; Stellar News
           </span>
-          <p> All rights reserved.</p>
+          <Link
+            href="https://github.com/hakanyorukk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex gap-2 place-items-center text-xl font-semibold  hover:-skew-y-6 px-2 hover:scale-110 z-30 hover:bg-slate-700 hover:p-2 hover:rounded-lg hover:skew-x-6 overflow-hidden"
+          >
+            <FaGithub className=" text-violet-400 " />
+            <p className="bg-clip-text text-transparent bg-gradient-to-r from-violet-500 to-cyan-400">
+              hakanyorukk
+            </p>
+          </Link>
+          <p className="text-base"> All rights reserved.</p>
         </div>
       </div>
     </div>
