@@ -1,6 +1,5 @@
 Modern Responsive design
-Tailwindcss
-Next.js
+Tech Stack: Next.js, Tailwind CSS, NasaOPen Source API. Space News Api, React Icons, React Slick
 
 ![Screenshot from 2024-08-14 17-10-07](https://github.com/user-attachments/assets/00394fc2-d47b-4fc3-af39-b0a9afe5fbad)
 
